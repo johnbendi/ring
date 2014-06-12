@@ -11,7 +11,7 @@
             [ring.middleware.session.store :as store]
             [ring.middleware.session.memory :as mem]))
 
-(defn- session-options
+(defn session-options
   [options]
   {:store        (options :store (mem/memory-store))
    :cookie-name  (options :cookie-name "ring-session")
